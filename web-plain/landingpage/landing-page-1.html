@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="./index.css" />
     <title>Marasoft</title>
   </head>
-  <body>
+  <body onload="load()">
     <div class="circle"></div>
-    <nav>
+    <!-- nav ls -->
+    <nav class="lg">
       <div class="logo">
         <img src="./assets/images/logo.svg" alt="" />
       </div>
@@ -23,6 +24,29 @@
         <a href="" class="signup"> Sign Up </a>
       </div>
     </nav>
+    <!-- nav sm -->
+    <nav class="sm">
+      <div class="logo">
+        <img src="./assets/images/logo.svg" alt="" />
+      </div>
+      <div style="justify-content: flex-end;">
+        <button class="nav-toggle" id="nav-toggle">
+          <img src="./assets/images/nav-toggle-open.svg" alt="" id="nav-toggle-open" class="nav-toggle-icon" >
+          <img src="./assets/images/nav-toggle-close.svg" alt="" id="nav-toggle-close" class="nav-toggle-icon" >
+        </button>
+      </div>
+    </nav>
+    <div class="nav-dropdown" id="nav-dropdown">
+      <ul>
+        <li class="link">Resources</li>
+        <li class="link">Services</li>
+        <li class="link">Our company</li>
+        <li style="background-color: #192cd1; color: white;">
+          <span>Log In</span>
+          <span>Sign Up </span>
+        </li>
+      </ul>
+    </div>
     <main>
       <div class="text">
         <h1>Make Fast And Easy Payments</h1>
@@ -65,5 +89,6 @@
       </a>
       <span>Find out more</span>
     </div>
+  <script src="./index.js"></script>
   </body>
 </html>

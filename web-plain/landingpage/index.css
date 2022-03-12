@@ -88,21 +88,71 @@ nav .form a.signup {
   color: white;
 }
 
+nav.sm{
+  display: none;
+}
+
+.nav-toggle{
+  width: 5vh;
+  height: 5vh;
+  padding: 0px;
+}
 /* logo */
 .logo img {
   max-width: 15vw;
 }
 
-@media screen and (max-width: 480px) {
+
+
+/* nav tab media queries */
+@media screen and (max-width:820px) {
   nav {
     /* display: block; */
-    margin: 15px 5px ;
+    margin: 20px ;
+  }
+
+  .logo img{
+    max-width: 90%;
+  }
+  nav div {
+    flex: 1;
+    font-size: 1.8vh;
+    font-weight: 300;
+    /* border: 1px solid; */
+  }
+
+  nav .links{
+    flex: 2;
+    justify-content: center;
+    padding: 0px 10px;
+  }
+  nav .form{
+    gap: 2vw;
+  }
+}
+
+/* nav mobile media queries */
+@media screen and (max-width: 480px) {
+  nav.lg{
+    display: none;
+  }
+  nav.sm{
+    display: flex;
+  }
+  nav {
+    /* display: block; */
+    margin: 15px ;
+  }
+
+  nav.mobile{
+    display: block;
   }
 
   nav div {
     flex: 1;
     font-size: 1.5vh;
     font-weight: 500;
+    align-items: center;
     /* border: 1px solid; */
   }
 
@@ -115,6 +165,7 @@ nav .form a.signup {
   nav .links{
     /* gap: 2.3px; */
     justify-content: space-around;
+    display: none;
     
     margin: 2px;
   }
@@ -128,8 +179,61 @@ nav .form a.signup {
   nav .form{
     gap: 3vw;
   }
-}
+  .nav-toggle{
+    background: none;
+    border: none;
+    padding: 2px;
+    background-color: var(--persian-blue);
+    box-sizing: border-box;
+    border-radius: 5px;
+    position: relative;
+  }
+  .nav-toggle-icon{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
 
+  #nav-toggle-close{
+    display: none;
+  }
+
+  .nav-dropdown{
+    background-color: white;
+    box-shadow: 0px 2px 3px #707effa9;
+    padding: 10px;
+    border-radius: 0px 0px 10px 10px;
+    color: var(--persian-blue);
+    position: absolute;
+    width: calc(100% - 20px);
+    display: none;
+  }
+
+  .nav-dropdown ul{
+    list-style: none;
+    padding: 0px;
+  }
+
+  .nav-dropdown li.link{
+    padding: 10px;
+  }
+  .nav-dropdown li{
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-dropdown li span{
+    padding: 10px;
+    flex: 1;
+    
+  }
+}
+@media screen and (min-width:481px) {
+  #nav-dropdown{
+    display: none;
+  }
+}
 /* main */
 main {
   margin-top: 15vh;
@@ -241,7 +345,70 @@ main p {
   width: 1.7vw;
   height: auto;
 }
+/* main tab media queries */
+@media screen and (max-width:820px) {
+  main{
+    margin-top: 20px;
+    flex-direction: column;
+    justify-content: center;
+  }
 
+  main h1{
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 2vh;
+  }
+  
+  main p{
+    text-align: center;
+    font-size: 2.5vh;
+    max-width: 80%;
+    margin: auto;    
+    margin-bottom: 5vh;
+  }
+
+  .text{
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .box{
+    width: 70%;
+    margin: auto;
+    padding: 3vh 4vh;
+  }
+
+  .marks{
+    gap: 4.5vh;
+  }
+
+  .findOutMore{
+    margin: auto;
+    justify-content: center;
+    padding: 3vh;
+  font-size: 3.1vw;
+
+  }
+
+  .findOutMore a{
+    width:6vw;
+  height: 6vw;
+  }
+
+  .findOutMore a img {
+  margin: auto;
+  width:50%;
+  height: auto;
+}
+
+.circle{
+  top: 90vh;
+  left: -20vw;
+}
+
+}
+
+/* main mobile media queries */
 @media screen and (max-width: 480px) {
   main {
     margin-top: 3px;
@@ -251,7 +418,7 @@ main p {
   main h1 {
     font-size: 6vh;
     text-align: center;
-    margin-top: 00px;
+    margin-top: 20px;
     margin-bottom: 2vh;
   }
 
@@ -271,6 +438,7 @@ main p {
     width: 80vw;
     margin: auto;
     padding: 20px;
+    font-size: 2.5vh;
     /* padding-top: 20px; */
   }
 
