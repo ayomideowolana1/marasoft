@@ -6,6 +6,11 @@
   --max-blue-purple: #a4adff;
   --magnolia: #f6f0ff;
   --mangolia-dark: #e5e3ed;
+  --yellow-green: #1ab700;
+  --int-orange:#B70000;
+  --cultured:#F5F5F5;
+  --cultured-dark:#F0F0F0;
+  --light-gray:#CDCDCD;
 }
 
 #logo {
@@ -233,7 +238,6 @@ nav.sm {
 }
 /* main */
 main {
-
   display: flex;
   justify-content: space-between;
   /* margin-top: 4.62vh; */
@@ -259,9 +263,6 @@ main {
   max-width: 37.2vw;
 }
 
-
-
-
 main h1 {
   font-size: 8.2vh;
   /* border: 1px solid; */
@@ -282,12 +283,12 @@ main p {
 }
 
 .findOutMore {
-    display: flex;
-    flex-direction: row;
-    background-color: var(--mid-slate-blue);
-    height: 7.87vh;
-    max-width: 19.3vw;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--mid-slate-blue);
+  height: 7.87vh;
+  max-width: 19.3vw;
+  align-items: center;
 }
 
 .findOutMore a {
@@ -295,17 +296,17 @@ main p {
   text-decoration: none;
   text-align: center;
   font-size: 1.4rem;
-   flex: 3;
+  flex: 3;
 }
 
 .findOutMore span {
-background-color: var(--max-blue-purple);
-display: inline-block;
-width: 15%;
-height: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
+  background-color: var(--max-blue-purple);
+  display: inline-block;
+  width: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* main tab media queries */
 @media screen and (max-width: 820px) {
@@ -336,10 +337,10 @@ align-items: center;
     margin: auto;
   }
   .text p {
-    margin-bottom:3vh;
+    margin-bottom: 3vh;
   }
 
-   .findOutMore{
+  .findOutMore {
     width: 80vw;
     max-width: 80vw;
     margin: auto;
@@ -348,7 +349,7 @@ align-items: center;
     display: flex;
   }
 
-  .findOutMore a{
+  .findOutMore a {
     font-size: 2.5vh;
   }
 
@@ -358,7 +359,7 @@ align-items: center;
     justify-content: center;
   }
 
-  .mockup img{
+  .mockup img {
     max-width: 100%;
     padding-bottom: 3vh;
     margin-top: -3vh;
@@ -404,7 +405,7 @@ align-items: center;
     margin-top: -3vh;
   }
 
-  .findOutMore{
+  .findOutMore {
     width: 80vw;
     margin: auto;
     font-size: 2.5vh;
@@ -412,9 +413,256 @@ align-items: center;
     display: flex;
   }
 
-  .findOutMore a{
+  .findOutMore a {
     font-size: 2.5vh;
   }
-
- 
 }
+
+.features {
+  background-color: white;
+  position: relative;
+  /* height: 500px; */
+  z-index: -1;
+  padding: 26vh 5.31vw;
+  padding-left: 5.31vw;
+  padding-right: 5.31vw;
+  overflow: hidden;
+}
+
+.features .feature-circle-1 {
+  background-color: var(--persian-blue);
+  width: 37.2vw;
+  height: 37.2vw;
+  border-radius: 50%;
+  position: absolute;
+  top: -59vh;
+  left: 55vw;
+  /* z-index: -1; */
+}
+.features .feature-circle-2 {
+  background-color: var(--persian-blue);
+  width: 37.2vw;
+  height: 37.2vw;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -60vh;
+  left: 55vw;
+  /* z-index: -1; */
+}
+
+.features h1{
+  color: var(--persian-blue);
+  font-size: 4.56vh;
+  margin-bottom: 2vh;
+  margin-top: 0px;
+}
+.red-text{
+  color: var(--int-orange);
+}
+.features p{
+  margin: 0px;
+  margin-bottom: 2vh;
+  font-size: 2.2vh;
+  max-width: 500px;
+  margin-bottom: 4vh;
+}
+
+.features section{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20vh;
+}
+.features section.second{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0px;
+  z-index: 2;
+}
+.features section > div{
+  /* border: 1px solid; */
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feature-1{
+  max-width: 37.76vw;
+}
+.feature-1{
+  max-width: 28.54vw;
+}
+.features section a{
+  background-color: var(--persian-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 14.48vw;
+  height: 7.2vh;
+  font-size: 2.8vh;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: center;
+  /* position: absolute; */
+  bottom: 0px;
+  left: 0px;
+}
+
+.cta{
+  background-color: var(--cultured);
+  padding: 6.77vw 18.51vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cta h1{
+  font-size: 4.63vh;
+  max-width: 40.3vw;
+  font-weight: 400;
+}
+.cta p{
+  font-size: 3.24vh;
+}
+
+.cta a{
+  font-size: 4.63vh;
+  background-color: var(--yellow-green);
+  color: white;
+  text-decoration: none;
+  padding: 2.31vh 9.22vw ;
+  border-radius: 2vh;
+}
+
+
+footer{
+  background-color: var(--cultured-dark);
+  display: flex;
+  flex-direction: column;
+}
+
+footer .container,.container2{
+  display: flex;
+  justify-content:flex-start;
+  gap: 7.55vw;
+  padding: 7.13vh 22.5vw 18.7vh 6.77vw;
+
+}
+
+
+footer .line{
+  border: 1px solid var(--light-gray);
+}
+
+.footer-gap{
+  height: 4.72vh;
+}
+
+footer a{
+  color: #000;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+footer .email{
+  color: var(--persian-blue);
+}
+/* tab queries for sections after footer */
+@media screen and (max-width:820px) {
+  .features{
+    padding: 10vh 5vh;
+    position: relative;
+  }
+
+  .features .feature-circle-1{
+      top: -48vw;
+      left: 12vh;
+      width: 60vw;
+      height: 60vw;
+    } 
+  .features .feature-circle-2{
+      display: none;
+    } 
+  .features section{
+    flex-direction: column-reverse;
+    margin-top: 100px;
+  }
+  .features section a{
+    width: 70%;
+    position: relative;
+    margin: auto;
+  }
+
+  .features section > div{
+    width: 100%;
+  }
+  .features section > div h1{
+    text-align: center;
+  }
+
+  .features p{
+    max-width: 100%;
+  }
+
+  .feature-1{
+    max-width: 100%;
+  }
+  .cta{
+    padding: 20px;
+    display: block;
+    
+  }
+
+  .cta >div{
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .cta a{
+    padding: 20px;
+  font-size: 3.5vh;
+    margin: auto;
+  }
+
+  .cta h1,p{
+    max-width: 90%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  
+  .cta h1{
+    max-width: 100%;
+  }
+
+  footer .container{
+      padding: 7.13vh ;
+      flex-wrap: wrap;
+      /* flex-direction: column; */
+      justify-content: center;
+      align-items: baseline;
+      padding: 20px 40px;
+  }
+  footer .container2{
+      padding: 7.13vh ;
+      /* flex-wrap: wrap; */
+      /* flex-direction: column; */
+      /* justify-content: center; */
+      /* justify-content: center; */
+      align-items: baseline;
+      padding: 20px 40px;
+  }
+
+  footer p{
+    text-align: left;
+  }
+}
+
+@media screen and (max-width:480px){
+  html{
+    width: 100vw;
+  }
+} 
