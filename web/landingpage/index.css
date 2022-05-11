@@ -84,7 +84,7 @@ nav .form {
 
 nav .form a {
   text-decoration: none;
-  color: #fff !important;
+  color: #fff ;
 }
 
 nav .form a.signup {

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Marasoft</title>
+  </head>
+  <body onload="load()">
+    <div class="circle"></div>
+    <!-- nav ls -->
+    <nav class="lg">
+      <div class="logo">
+        <img src="./assets/images/logo.svg" alt="" />
+      </div>
+      <div class="links">
+        <a href="">Resources</a>
+        <a href="">Services</a>
+        <a href="">Our company</a>
+      </div>
+      <div class="form">
+        <a href=""> Log In </a>
+        <a href="" class="signup"> Sign Up </a>
+      </div>
+    </nav>
+    <!-- nav sm -->
+    <nav class="sm">
+      <div class="logo">
+        <img src="./assets/images/logo.svg" alt="" />
+      </div>
+      <div style="justify-content: flex-end;">
+        <button class="nav-toggle" id="nav-toggle">
+          <img src="./assets/images/nav-toggle-open.svg" alt="" id="nav-toggle-open" class="nav-toggle-icon" >
+          <img src="./assets/images/nav-toggle-close.svg" alt="" id="nav-toggle-close" class="nav-toggle-icon" >
+        </button>
+      </div>
+    </nav>
+    <div class="nav-dropdown" id="nav-dropdown">
+      <ul>
+        <li class="link">Resources</li>
+        <li class="link">Services</li>
+        <li class="link">Our company</li>
+        <li style="background-color: #192cd1; color: white;">
+          <span>Log In</span>
+          <span>Sign Up </span>
+        </li>
+      </ul>
+    </div>
+    <main>
+      <div class="text">
+        <h1>Make Fast And Easy Payments</h1>
+        <p>
+          Faster, easier, reliable and cheaper payment service that works
+          wherever you are.
+        </p>
+      </div>
+      <div class="box">
+        <div>
+            <div class="marks">
+                <span class="mark" >
+                    <span class="image">
+                        <img src="./assets/images/checkmark.svg" alt="" />
+                    </span>
+                  <span> Pay For Goods </span>
+                </span >
+                <span class="mark" >
+                    <span class="image">
+                        <img src="./assets/images/checkmark.svg" alt="" />
+                    </span>
+                  <span> Buy Airtime </span>
+                </span >
+                <span class="mark" >
+                    <span class="image">
+                        <img src="./assets/images/checkmark.svg" alt="" />
+                    </span>
+                  <span> Buy Tickets </span>
+                </span >
+            </div>
+        <div >
+            <button>Get Started</button>
+        </div>
+      
+      </div>
+    </main>
+    <div class="findOutMore">
+      <a href="">
+        <img src="./assets/images/arrowdown.svg" alt="" />
+      </a>
+      <span>Find out more</span>
+    </div>
+  <script src="./index.js"></script>
+  </body>
+</html>
