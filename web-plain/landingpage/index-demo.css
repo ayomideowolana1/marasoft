@@ -58,6 +58,7 @@ nav {
   margin: 3.1vh 3.4vw;
   margin-bottom: 0px;
   background-color: var(--persian-blue);
+  height: 10vh;
 }
 
 nav > div {
@@ -127,7 +128,7 @@ nav.sm {
   nav.sm {
     display: flex;
     align-items: center;
-    height: 6.4vh;
+    height: 10vh;
     margin: 0px;
     width: 100%;
     box-sizing: border-box;
@@ -238,6 +239,7 @@ main {
   display: flex;
   background-color: var(--persian-blue);
   justify-content: space-between;
+  height: 90vh;
   /*  */
   /* margin-top: 4.62vh; */
   /* align-items: center; */
@@ -466,6 +468,7 @@ main {
 
 /* features mobile media queries */
 @media screen and (max-width: 480px) {
+  
   .features section {
     display: flex;
     justify-content: space-between;
@@ -694,6 +697,10 @@ footer .email {
   footer .container2 > div {
     margin-bottom: 2vh;
   }
+
+  .toggle-body{
+    display: none;
+  }
 }
 
 /* general */
@@ -716,4 +723,12 @@ footer .email {
 
 .b1{
   border: 1px solid red;
+}
+
+.toggle-item > .toggle-body{
+  display: none;
+}
+
+.toggle-item.active > .toggle-body{
+  display: block;
 }

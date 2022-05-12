@@ -20,27 +20,26 @@ const load = () => {
     //  console.log(dropdown.style.display)
   });
 
-  let footerTogglerItems = $(".toggle-item > div.toggle-header");
+  let footerToggles = Array.from(
+    document.querySelectorAll(".toggle-item > .toggle-header")
+  );
+  let footerTogglesBody = Array.from(
+    document.querySelectorAll(".toggle-item > .toggle-body")
+  );
 
-  let toggles = $(".toggle-body");
-  let togglesArr = Array.from(toggles);
-
-  togglesArr.forEach(item => {
-    $(`#${item.id}`).toggle();
-  });
-
-  Array.from(footerTogglerItems).forEach(header => {
-    header.addEventListener("click", e => {
-      togglesArr.forEach(item => {
-        $(`#${item.id}`).hide();
-      });
-      let id = header.dataset.toggleId;
-      let element = document.getElementById(id);
-
-      if (element.style.display == "none") {
-        $(`#${id}`).slideDown(500);
-      } else {
-        $(`#${id}`).slideUp();
+  footerToggles.forEach(toggle => {
+    toggle.addEventListener("click", e => {
+      let id = toggle.dataset.toggleId;
+      for (let i = 0; i < footerTogglesBody.length; i++) {
+        if (footerTogglesBody[i].id == id) {
+          if (footerTogglesBody[i].style.display == "block") {
+            footerTogglesBody[i].style.display = "none";
+          } else {
+            footerTogglesBody[i].style.display = "block";
+          }
+        } else {
+          footerTogglesBody[i].style.display = "none";
+        }
       }
     });
   });
@@ -64,23 +63,23 @@ const loadAnimations = () => {
   // mainHeaderP.css("visibility", "hidden");
   // mainMockup.css("visibility", "hidden");
   // mainCta.css("visibility", "hidden");
-  
+
   // logo fade in
   setTimeout(() => {
-    logo.addClass("animate__animated animate__lightSpeedInRight animate__fast");
+    // logo.addClass("animate__animated animate__lightSpeedInRight animate__fast");
     logo.css("visibility", "visible");
   }, 300);
-  
+
   //main fade in up
   setTimeout(() => {
-    mainText.addClass("animate__animated animate__bounceInUp   ");
-    mainMockup.addClass("animate__animated animate__bounceInUp ");
+    mainText.addClass("animate__animated animate__fadeInUp   ");
+    mainMockup.addClass("animate__animated animate__fadeInUp ");
   }, 500);
 
   setTimeout(() => {
-    mainCta.addClass("animate__animated animate__bounceIn ");
+    mainCta.addClass("animate__animated animate__rubberBand animate__slow ");
     mainCta.css("visibility", "visible");
-  }, 1000);
+  }, 1300);
 
   // setTimeout(() => {
   //   mainHeaderP.css("visibility", "visible");
@@ -100,7 +99,6 @@ const loadAnimations = () => {
     let f1 = $("#feature-1");
     let f2 = $("#feature-2");
     let f3 = $("#feature-3");
-    
 
     let animHeightF1 = mainHeight - 250;
     let animHeightF2 = mainHeight + f1.height() - 250;
@@ -111,7 +109,7 @@ const loadAnimations = () => {
 
     if (scroll > animHeightF1) {
       f1.css("visibility", "visible");
-      f1.addClass("animate__animated animate__fadeInUp");
+      f1.addClass("animate__animated animate__fadeInRight");
     }
 
     if (scroll > animHeightF2) {
@@ -121,7 +119,7 @@ const loadAnimations = () => {
 
     if (scroll > animHeightF3) {
       f3.css("visibility", "visible");
-      f3.addClass("animate__animated animate__fadeInUp");
+      f3.addClass("animate__animated animate__fadeInRight");
     }
   };
 };
