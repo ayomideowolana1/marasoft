@@ -15,7 +15,7 @@
 }
 
 * {
-  transition: 0.3s ease-in-out;
+  /* transition: 0.3s ease-in-out; */
 }
 
 html {
@@ -47,7 +47,7 @@ body {
   position: fixed;
   top: 80vh;
   left: -15vw;
-  /* visibility: hidden; */
+  /*  */
 }
 
 /* nav */
@@ -238,7 +238,7 @@ main {
   display: flex;
   background-color: var(--persian-blue);
   justify-content: space-between;
-  /* visibility: hidden; */
+  /*  */
   /* margin-top: 4.62vh; */
   /* align-items: center; */
 }
@@ -246,7 +246,7 @@ main {
   /*  */
   /* margin-top: 10.27vh; */
   /* max-width: 38vw; */
-  /* visibility: hidden; */
+  /*  */
   /* margin-left: 5.3vw; */
   display: flex;
   flex-direction: column;
@@ -286,20 +286,27 @@ main {
   display: flex;
   flex-direction: row;
   background-color: var(--mid-slate-blue);
-  height: 7.87vh;
+  /* height: 7.87vh; */
   /* width: 19.3vw; */
   align-items: center;
+  transition: 0.3s ease;
 }
 
 .findOutMore a {
+  flex: 1;
+  /* border: 1px solid; */
+  padding: 10px;
+  height: 100%;
   color: white;
   text-decoration: none;
   text-align: center;
   font-size: 1.4rem;
   flex: 3;
+  line-height: 1.5;
+  /* display: block; */
 }
 
-.findOutMore span {
+/* .findOutMore span {
   background-color: var(--max-blue-purple);
   display: inline-block;
   width: 15%;
@@ -307,7 +314,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 /* main tab media queries */
 
 /* main mobile media queries */
@@ -330,7 +337,7 @@ main {
 
   .text p {
     text-align: center;
-    visibility: hidden;
+
     max-width: 100%;
     margin: auto;
     margin-bottom: 3.3vh;
@@ -341,7 +348,6 @@ main {
     font-size: 4.3vh;
     margin-bottom: 1.85vh;
     text-align: center;
-    visibility: hidden;
 
     margin-top: 0px;
     /* line-height: 1.5; */
@@ -351,7 +357,7 @@ main {
     margin: auto;
     display: flex;
     justify-content: center;
-    visibility: hidden;
+
     /*  */
     width: 100%;
     margin-top: 3.9vh;
@@ -365,18 +371,26 @@ main {
   }
 
   .findOutMore {
-    width: 51vw;
-    height: 4.4vh;
     margin: auto;
     margin-bottom: 3vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 5px;
     visibility: hidden;
   }
 
   .findOutMore a {
-    font-size: 1.72vh;
+    width: 51vw;
+    /* border: 1px solid; */
+    height: 4vh;
+    font-size: 2vh;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* padding: 20px; */
   }
 }
 
@@ -513,6 +527,7 @@ main {
     text-align: center;
     margin: auto;
     border-radius: 5px;
+    margin-bottom: 3vh;
   }
 }
 
@@ -696,4 +711,9 @@ footer .email {
     justify-content: center;
     flex-wrap: wrap;
   }
+}
+
+
+.b1{
+  border: 1px solid red;
 }

@@ -59,42 +59,38 @@ const loadAnimations = () => {
   let features = $(".features");
   let featuresSection = $(".features > section");
 
-  mainText.css("visibility", "hidden");
-  mainHeaderH1.css("visibility", "hidden");
-  mainHeaderP.css("visibility", "hidden");
-  mainMockup.css("visibility", "hidden");
-  mainCta.css("visibility", "hidden");
-
-  console.log(main.height());
-
+  // mainText.css("visibility", "hidden");
+  // mainHeaderH1.css("visibility", "hidden");
+  // mainHeaderP.css("visibility", "hidden");
+  // mainMockup.css("visibility", "hidden");
+  // mainCta.css("visibility", "hidden");
+  
+  // logo fade in
   setTimeout(() => {
-    main.css("visibility", "visible");
+    logo.addClass("animate__animated animate__lightSpeedInRight animate__fast");
+    logo.css("visibility", "visible");
+  }, 300);
+  
+  //main fade in up
+  setTimeout(() => {
+    mainText.addClass("animate__animated animate__bounceInUp   ");
+    mainMockup.addClass("animate__animated animate__bounceInUp ");
   }, 500);
 
   setTimeout(() => {
-    mainHeaderH1.css("visibility", "visible");
-    mainHeaderH1.addClass("animate__animated animate__bounceInUp");
+    mainCta.addClass("animate__animated animate__bounceIn ");
+    mainCta.css("visibility", "visible");
   }, 1000);
 
-  setTimeout(() => {
-    mainHeaderP.css("visibility", "visible");
-    mainHeaderP.addClass("animate__animated animate__bounceInUp");
-  }, 1300);
+  // setTimeout(() => {
+  //   mainHeaderP.css("visibility", "visible");
+  //   mainHeaderP.addClass("animate__animated animate__bounceInUp");
+  // }, 1300);
 
-  setTimeout(() => {
-    mainCta.css("visibility", "visible");
-    mainCta.addClass("animate__animated animate__bounceIn");
-  }, 3000);
-
-  setTimeout(() => {
-    mainMockup.css("visibility", "visible");
-    mainMockup.addClass("animate__animated animate__zoomIn");
-  }, 4000);
-
-  setTimeout(() => {
-    logo.css("visibility", "visible");
-    logo.addClass("animate__animated animate__lightSpeedInRight");
-  }, 100);
+  // setTimeout(() => {
+  //   mainMockup.css("visibility", "visible");
+  //   mainMockup.addClass("animate__animated animate__zoomIn");
+  // }, 4000);
 
   //  Scroll events
   window.onscroll = () => {
@@ -104,24 +100,25 @@ const loadAnimations = () => {
     let f1 = $("#feature-1");
     let f2 = $("#feature-2");
     let f3 = $("#feature-3");
+    
 
     let animHeightF1 = mainHeight - 250;
     let animHeightF2 = mainHeight + f1.height() - 250;
-    let animHeightF3 = mainHeight + f1.height() + f2.height() -250;
-    
-    console.log(scroll)
-    console.log(animHeightF1,animHeightF2,animHeightF3)
+    let animHeightF3 = mainHeight + f1.height() + f2.height() - 250;
+
+    console.log(scroll);
+    console.log(animHeightF1, animHeightF2, animHeightF3);
 
     if (scroll > animHeightF1) {
       f1.css("visibility", "visible");
       f1.addClass("animate__animated animate__fadeInUp");
     }
-    
+
     if (scroll > animHeightF2) {
       f2.css("visibility", "visible");
       f2.addClass("animate__animated animate__fadeInRight");
     }
-    
+
     if (scroll > animHeightF3) {
       f3.css("visibility", "visible");
       f3.addClass("animate__animated animate__fadeInUp");
