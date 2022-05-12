@@ -10,6 +10,10 @@
       href="https://dashboard.marasoftpay.com/assets/image/icon.png"
       type="image/x-icon"
     />
+    <link
+    rel="stylesheet"
+    href="./animate.css"
+  />
     <title>Marasoft Pay - Online Payments made Fast and Easy</title>
   </head>
   <body onload="load()">
@@ -91,12 +95,11 @@
     <!-- ------------ END OF SECTION -------------- -->
 
     <!-- MAIN -->
-    <main>
+    <main >
       <div class="text">
-        <h1>Make fast and easy Payments</h1>
+        <h1 >Online Payments made Fast and Easy</h1>
         <p>
-          Faster, easier, and reliable payment service that works wherever you
-          are.
+          Faster, easier, cheaper and reliable payment services that works wherever you are.
         </p>
         <div class="findOutMore">
           <a href=""> Find Out More </a>
@@ -117,15 +120,15 @@
     <div class="features">
       <!-- <div class="feature-circle-1"></div>
       <div class="feature-circle-2"></div> -->
-      <section>
+      <section id="feature-1">
         <div>
           <img src="./assets/images/feature-1.svg" class="feature-1" alt="" />
         </div>
 
         <div class=".feature-text">
           <h1>
-            We process transactions by direct transfers, for local payments
-            only.
+            We process transactions by direct transfers
+            <!-- , for local paymentsonly. -->
           </h1>
           <p>
             Be rest assured that our fast and seamless payment platform doesn’t
@@ -134,7 +137,7 @@
           <a href=""> Learn more</a>
         </div>
       </section>
-      <section class="second">
+      <section class="second" id="feature-2">
         <div>
           <img src="./assets/images/feature-2.svg" class="feature-1" alt="" />
         </div>
@@ -149,7 +152,7 @@
           </p>
         </div>
       </section>
-      <section class="second">
+      <section class="second" id="feature-3">
         <div>
           <img
             style="width: 64.8vw; margin: auto"
@@ -210,11 +213,13 @@
     <footer>
       <div class="container">
         <div class="toggle-item">
-          <h4 data-toggle-id="why-marasoft">
-            <span> Why Marasoft </span>
-            <span><img src="./assets/images/tih-icon-open.svg" alt=""></span>
-          </h4>
-          <div id="why-marasoft" class="toggle">
+          <div class="toggle-header" data-toggle-id="why-marasoft">
+            <h4 >
+              <span> Why Marasoft </span>
+              <span><img src="./assets/images/tih-icon-open.svg" alt=""></span>
+            </h4>
+          </div>
+          <div id="why-marasoft" class="toggle-body">
             <p><a href="./404.html">Why choose Marasoft?</a></p>
             <p><a href="./404.html">Success rates</a></p>
 
@@ -227,13 +232,14 @@
         </div>
 
         <div class="toggle-item">
+          <div class="toggle-header" data-toggle-id="learn">
+            <h4  >
+              <span>Learn</span>   
+              <span><img src="./assets/images/tih-icon-open.svg" alt=""></span>
+            </h4>
+          </div>
 
-          <h4 data-toggle-id="learn" class="toggle">
-          <span>Learn</span>   
-            <span><img src="./assets/images/tih-icon-open.svg" alt=""></span>
-          </h4>
-
-          <div id="learn">
+          <div id="learn" class="toggle-body"> 
             <p>
               <a href="https://marasoftpay.blogspot.com/" target="_blank"
                 >Blog</a
@@ -246,21 +252,25 @@
         </div>
 
         <div class="toggle-item">
-          <h4 data-toggle-id="customers">
-            <span>Customers</span>
-            <span><img src="./assets/images/tih-icon-open.svg" alt=""></span>
-          </h4>
-          <div id="customers" class="toggle">
+          <div class="toggle-header" data-toggle-id="customers">
+            <h4>
+              <span>Customers</span>
+              <span><img src="./assets/images/tih-icon-open.svg" alt=""></span>
+            </h4>
+          </div>
+          <div id="customers" class="toggle-body">
             <p><a href="./404.html">Testimonials</a></p>
           </div>
         </div>
 
         <div class="toggle-item">
-          <h4 data-toggle-id="support">
-            <span>Support</span>
-            <span><img src="./assets/images/tih-icon-open.svg" alt=""></span>
-          </h4>
-          <div id="support" class="toggle">
+          <div class="toggle-header" data-toggle-id="support">
+            <h4 >
+              <span>Support</span>
+              <span><img src="./assets/images/tih-icon-open.svg" alt=""></span>
+            </h4>
+          </div>
+          <div id="support" class="toggle-body">
             <p><a href="./404.html">Help Desk</a></p>
             <p><a href="./404.html">Contact Us</a></p>
             <p><a href="./404.html">Why was I debited?</a></p>
@@ -268,21 +278,25 @@
         </div>
 
         <div class="toggle-item">
-          <h4 data-toggle-id="community">
+          <div class="toggle-header" data-toggle-id="community">
+            <h4>
             <span>Community</span>
             <span><img src="./assets/images/tih-icon-open.svg" alt=""></span>
+          </div>
           </h4>
-          <div id="community" class="toggle">
+          <div id="community" class="toggle-body">
             <p><a href="">Lagos, Nigeria</a></p>
           </div>
         </div>
 
         <div class="toggle-item">
-          <h4 data-toggle-id="about">
-            <span>About</span>
-            <span><img src="./assets/images/tih-icon-open.svg" alt=""></span>
-          </h4>
-          <div id="about" class="toggle">
+          <div class="toggle-header" data-toggle-id="about">
+            <h4 >
+              <span>About</span>
+              <span><img src="./assets/images/tih-icon-open.svg" alt=""></span>
+            </h4>
+          </div>
+          <div id="about" class="toggle-body">
             <p><a href="./404.html">Company</a></p>
             <p><a href="./404.html">Careers</a></p>
             <p><a href="./404.html">Compliance</a></p>
@@ -327,6 +341,7 @@
     <!-- ------------ END OF SECTION -------------- -->
 
     <!-- ------------ SCRIPT -------------- -->
+    <script src="./jQuery.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>
