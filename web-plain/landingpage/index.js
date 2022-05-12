@@ -32,7 +32,7 @@ const load = () => {
   Array.from(footerTogglerItems).forEach(header => {
     header.addEventListener("click", e => {
       togglesArr.forEach(item => {
-        $(`#${item.id}`).hide(500);
+        $(`#${item.id}`).hide();
       });
       let id = header.dataset.toggleId;
       let element = document.getElementById(id);
@@ -40,7 +40,7 @@ const load = () => {
       if (element.style.display == "none") {
         $(`#${id}`).slideDown(500);
       } else {
-        $(`#${id}`).slideUp(500);
+        $(`#${id}`).slideUp();
       }
     });
   });
