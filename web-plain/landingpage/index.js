@@ -1,5 +1,6 @@
 const load = () => {
   let toggle = document.getElementById("nav-toggle");
+  let toggleImg = document.getElementById("nav-toggle img");
 
   loadAnimations();
 
@@ -12,12 +13,14 @@ const load = () => {
       dropdown.style.display = "block";
       closeIcon.style.display = "block";
       openIcon.style.display = "none";
+      document.body.style.overflow="hidden"
     } else {
       dropdown.style.display = "none";
       openIcon.style.display = "block";
       closeIcon.style.display = "none";
+      document.body.style.overflow=""
     }
-    //  console.log(dropdown.style.display)
+    console.log(toggle);
   });
 
   let footerToggles = Array.from(
@@ -77,7 +80,7 @@ const loadAnimations = () => {
   }, 500);
 
   setTimeout(() => {
-    mainCta.addClass("animate__animated animate__rubberBand animate__slow ");
+    mainCta.addClass("animate__animated animate__zoomIn animate__fast");
     mainCta.css("visibility", "visible");
   }, 1300);
 
@@ -97,29 +100,34 @@ const loadAnimations = () => {
     let mainHeight = main.height();
     let scroll = window.scrollY;
     let f1 = $("#feature-1");
+    let f1a = $("#feature-1 a");
     let f2 = $("#feature-2");
     let f3 = $("#feature-3");
+    let cta = $("cta");
 
     let animHeightF1 = mainHeight - 250;
     let animHeightF2 = mainHeight + f1.height() - 250;
     let animHeightF3 = mainHeight + f1.height() + f2.height() - 250;
 
-    console.log(scroll);
+    console.log(f1a);
     console.log(animHeightF1, animHeightF2, animHeightF3);
 
     if (scroll > animHeightF1) {
       f1.css("visibility", "visible");
-      f1.addClass("animate__animated animate__fadeInRight");
+      f1.addClass("animate__animated animate__fadeInRight animate__fast");
+      f1a.addClass("animate__animated animate__zoomIn");
     }
 
     if (scroll > animHeightF2) {
       f2.css("visibility", "visible");
-      f2.addClass("animate__animated animate__fadeInRight");
+      f2.addClass("animate__animated animate__fadeInRight animate__fast");
     }
 
     if (scroll > animHeightF3) {
       f3.css("visibility", "visible");
-      f3.addClass("animate__animated animate__fadeInRight");
+      f3.addClass("animate__animated animate__fadeInRight animate__fast");
     }
+
+    console.log($("#bottom").position())
   };
 };

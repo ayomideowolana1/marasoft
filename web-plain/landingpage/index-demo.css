@@ -205,6 +205,7 @@ nav.sm {
     color: var(--persian-blue);
     position: absolute;
     width: calc(100% - 20px);
+    z-index: 1;
     display: none;
   }
 
@@ -469,17 +470,29 @@ main {
 /* features mobile media queries */
 @media screen and (max-width: 480px) {
   
+  .features {
+    padding-bottom: 10vh;
+  }
+
   .features section {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20vh;
     width: 85vw;
     margin: auto;
+    margin-top: 10vh;
+    margin-bottom: 15vh;
+  }
+
+  .features section.second{
+    display: flex;
+    justify-content: space-between;
+    width: 85vw;
+    margin: auto;
+    margin-bottom: 15vh;
   }
 
   .features section {
     flex-direction: column-reverse;
-    margin-top: 5.8vh;
   }
 
   #feature-1,
@@ -513,8 +526,9 @@ main {
 
   .features section img {
     margin-top: 2.7vh;
-    width: 85.3vw;
+    width: 64.8vw;
     margin: auto;
+    margin-top: 20px;
   }
 
   .features section a {
