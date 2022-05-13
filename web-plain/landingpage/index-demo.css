@@ -336,6 +336,7 @@ main {
   .text {
     max-width: 100vw;
     margin-top: 7.8vh;
+    visibility: hidden;
   }
 
   .text p {
@@ -361,7 +362,7 @@ main {
     display: flex;
     justify-content: center;
 
-    /*  */
+    visibility: hidden;
     width: 100%;
     margin-top: 3.9vh;
     padding-bottom: 12.7vh;
@@ -745,4 +746,8 @@ footer .email {
 
 .toggle-item.active > .toggle-body{
   display: block;
+}
+
+#bottom{
+  visibility: hidden;
 }
