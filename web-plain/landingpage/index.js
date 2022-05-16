@@ -2,7 +2,11 @@ const load = () => {
   let toggle = document.getElementById("nav-toggle");
   let toggleImg = document.getElementById("nav-toggle img");
 
-  loadAnimations();
+  if (screen.width <= 1024) {
+    loadAnimations();
+  } else {
+    loadDesktopAnimations();
+  }
 
   toggle.addEventListener("click", () => {
     let dropdown = document.getElementById("nav-dropdown");
@@ -20,7 +24,6 @@ const load = () => {
       closeIcon.style.display = "none";
       document.body.style.overflow = "";
     }
-    console.log(toggle);
   });
 
   let footerToggles = Array.from(
@@ -62,10 +65,6 @@ const loadAnimations = () => {
   let featuresSection = $(".features > section");
 
   mainText.css("visibility", "hidden");
-  // mainHeaderH1.css("visibility", "hidden");
-  // mainHeaderP.css("visibility", "hidden");
-  // mainMockup.css("visibility", "hidden");
-  // mainCta.css("visibility", "hidden");
 
   // logo fade in
   setTimeout(() => {
@@ -86,16 +85,6 @@ const loadAnimations = () => {
     mainCta.css("visibility", "visible");
   }, 1300);
 
-  // setTimeout(() => {
-  //   mainHeaderP.css("visibility", "visible");
-  //   mainHeaderP.addClass("animate__animated animate__bounceInUp");
-  // }, 1300);
-
-  // setTimeout(() => {
-  //   mainMockup.css("visibility", "visible");
-  //   mainMockup.addClass("animate__animated animate__zoomIn");
-  // }, 4000);
-
   //  Scroll events
   window.onscroll = () => {
     // when scroll passes main animate features
@@ -111,8 +100,6 @@ const loadAnimations = () => {
     let test = main.position();
 
     let scroll_pass_main = test.top + mainHeight;
-
-    // console.log(test.top + mainHeight)
 
     let animHeightF1 = mainHeight - 250;
     let animHeightF2 = mainHeight + f1.height() - 250;
@@ -142,12 +129,118 @@ const loadAnimations = () => {
     let f3_position = $("#feature-3").position();
     let f3_height = $("#feature-3").height();
     let f3_total_height = f3_height + f3_position.top + 100;
-    console.log(f3_total_height);
-    
+
     if (scroll > f3_total_height) {
-      $("#bottom").addClass("animate__animated animate__fadeInUp animate__slow");
+      $("#bottom").addClass(
+        "animate__animated animate__fadeInUp animate__slow"
+      );
       $("#bottom").css("visibility", "visible");
-      console.log("passed");
+    }
+  };
+};
+
+const loadDesktopAnimations = () => {
+  let text = $(".text");
+  let mockup = $(".mockup");
+
+  setTimeout(() => {
+    text.addClass("animate__animated animate__fadeInLeft");
+    text[0].style.visibility = "visible";
+    mockup.addClass("animate__animated animate__fadeInRight animated__slow");
+    mockup[0].style.visibility = "visible";
+  }, 300);
+
+  //  Scroll events
+  window.onscroll = () => {
+    let mainHeight = $("main").height();
+
+    let f1 = $("#feature-1");
+    let f1Height = $("#feature-1").height();
+    let f1H1 = $("#f1-text h1");
+    let f1p = $("#f1-text p");
+    let f1Mockup = $("#f1-mockup");
+    let f1a = $("#feature-1 a");
+
+    let f2 = $("#feature-2");
+    let f2Height = $("#feature-2").height();
+    let f2H1 = $("#f2-text h1");
+    let f2p = $("#f2-text p");
+    let f2Mockup = $("#f2-mockup");
+    let f2a = $("#feature-2 a");
+
+    let f3 = $("#feature-3");
+    let f3Height = $("#feature-3").height();
+    let f3H1 = $("#f3-text h1");
+    let f3p = $("#f3-text p");
+    let f3Mockup = $("#f3-mockup");
+    let f3a = $("#feature-3 a");
+
+    let bottom = $("#bottom");
+
+    let scroll = window.scrollY;
+
+    // feature 1 scroll animations
+    if (scroll >= mainHeight / 2) {
+      f1H1.addClass("animate__animated animate__fadeInLeft ");
+      f1H1.css("visibility", "visible");
+      f1Mockup.addClass("animate__animated animate__fadeInRight ");
+      f1Mockup.css("visibility", "visible");
+
+      setTimeout(() => {
+        f1p.addClass("animate__animated animate__fadeInLeft ");
+        f1p.css("visibility", "visible");
+      }, 100);
+
+      setTimeout(() => {
+        f1a.addClass("animate__animated animate__fadeInLeft ");
+        f1a.css("visibility", "visible");
+      }, 200);
+    }
+
+    // feature 2 scroll animations
+    if (scroll >= mainHeight + f1Height) {
+      console.log("feature 2 scroll animations");
+      f2H1.addClass("animate__animated animate__fadeInRight ");
+      f2H1.css("visibility", "visible");
+      f2Mockup.addClass("animate__animated animate__fadeInLeft ");
+      f2Mockup.css("visibility", "visible");
+
+      setTimeout(() => {
+        f2p.addClass("animate__animated animate__fadeInRight ");
+        f2p.css("visibility", "visible");
+      }, 100);
+
+      setTimeout(() => {
+        f2a.addClass("animate__animated animate__fadeInRight ");
+        f2a.css("visibility", "visible");
+      }, 200);
+    }
+
+    // feature 3 scroll animations
+    if (scroll >= mainHeight + f1Height + f2Height + 300) {
+      console.log("feature 3 scroll animations");
+      f3H1.addClass("animate__animated animate__fadeInLeft ");
+      f3H1.css("visibility", "visible");
+      f3Mockup.addClass("animate__animated animate__fadeInRight ");
+      f3Mockup.css("visibility", "visible");
+
+      setTimeout(() => {
+        f3p.addClass("animate__animated animate__fadeInLeft ");
+        f3p.css("visibility", "visible");
+      }, 100);
+
+      setTimeout(() => {
+        f3a.addClass("animate__animated animate__fadeInLeft ");
+        f3a.css("visibility", "visible");
+      }, 200);
+    }
+
+    // bottom scroll animations
+    if (scroll >= mainHeight + f1Height + f2Height + f3Height +  800) {
+      // console.log(bottom[0]);
+      $("#bottom").addClass("animate__animated animate__fadeInUp");
+      $("#bottom").css("visibility","visible")
+      console.log("bottom scroll animations");
     }
 
   };
